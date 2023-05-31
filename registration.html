@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="registration.css">
+    <link rel="stylesheet" href="https://cdn.tutorialjinni.com/intl-tel-input/17.0.8/css/intlTelInput.css"/>
+    <script src="registration.js"></script>
+<style>
+#container {
+	margin: 0 auto;
+}
+
+p {
+	text-align: center;
+}
+
+nav {
+	margin: 50px 0;
+	background-color: #E64A19;
+}
+
+nav ul {
+	padding: 0;
+  margin: 0;
+	list-style: none;
+	position: relative;
+	}
+	
+nav ul li {
+	display:inline-block;
+	background-color: #E64A19;
+	}
+
+nav a {
+	display:block;
+	padding:0 10px;	
+	color:#FFF;
+	font-size:20px;
+	line-height: 60px;
+	text-decoration:none;
+}
+
+nav a:hover { 
+	background-color: #000000; 
+}
+
+/* Hide Dropdowns by Default */
+nav ul ul {
+	display: none;
+	position: absolute; 
+	top: 60px; /* the height of the main nav */
+}
+	
+/* Display Dropdowns on Hover */
+nav ul li:hover > ul {
+	display:inherit;
+}
+	
+/* Fisrt Tier Dropdown */
+nav ul ul li {
+	width:170px;
+	float:none;
+	display:list-item;
+	position: relative;
+}
+
+/* Second, Third and more Tiers	*/
+nav ul ul ul li {
+	position: relative;
+	top:-60px; 
+	left:170px;
+}
+
+	
+/* Change this in order to change the Dropdown symbol */
+li > a:after { content:  ' +'; }
+li > a:only-child:after { content: ''; }
+
+</style>
+</head>
+<body>
+<body>
+<div id="container">
+<nav>
+<ul>
+<li><a href="home.html">HOME</a>
+<ul>
+<li><a href="#">DIET</a>
+<ul>
+<li><a href="healthy.html">Healthy diet plan</a></li>
+                    <li><a href="weight.html">Diet for women</a></li>
+                    <li><a href="mendiet.html">Diet for men</a>
+                     <li><a href="nutrition.html">Nutrition according to ages</a></li>
+                     </ul>                
+<li><a href="#">EXERCISES</a>
+<ul>                    
+<li><a href="kids.html">Exercises for kids</a></li>                    
+<li><a href="preganacyexercises.html">Exercises for pregenanacy women</a></li>
+<li><a href="hearexercises.html">exercises for heart pateints</a>
+<li><a href="bpexercises.html">exercises for bp patients</a></li>
+<li><a href="diabetes.html">exercises for diabities patients</a></li>
+</ul>
+</li>
+<li><a href="tips.html">PRECAUTIONS</a></li            
+</ul>
+</li></ul>
+<li><a href="registration.html">register</a></li>
+<li><a href="contact.html">Contact Us</a></li>           
+<li><a href="#">About Us</a></li>
+<li><a href="login.html">Login</a></li>           
+</ul></nav>
+</div>
+
+
+    <div class="container">
+        <form id="contact" action="" method="post">
+            <h1>Registration Form</h1>
+            <h3>Fill the form below and press the submit button!</h3>
+            <div class="row">
+                <!-- first column -->
+                <div class="column">                        
+                    <fieldset>
+                        <input type="text" placeholder="Full Name *" name="name" required autofocus>
+                    </fieldset>
+                    <fieldset>
+                        <input type="text" placeholder="Father name *" name="fname" required autofocus>
+                    </fieldset>
+                    <fieldset>
+                        <input type="email" placeholder="Your email *" name="email" required autofocus>
+                    </fieldset>
+                    <fieldset>
+                        <input type="text" placeholder="Date of birth *" name="date" onfocus="(this.type = 'date')" required autofocus>
+                    </fieldset>
+                    <!-- adding all country code list -->
+                    <fieldset>
+                        <input type="text" placeholder="Phone number *" name="phone" id="phone" required autofocus>
+                    </fieldset>
+                </div>
+                <!-- second column -->
+                <div class="column">
+                    <fieldset>
+                        <p>What is your gender?</p>
+                        <div class="radio">
+                            <input type="radio" id="male" name="gender" required>
+                            <label for="male">Male</label>
+                        </div>
+                        <div class="radio">
+                            <input type="radio" id="female" name="gender" required>
+                            <label for="female">Female</label>
+                        </div>
+                    </fieldset>
+                    
+            <!-- submit button -->
+            <fieldset>
+                <button type="submit" id="button">Submit Now</button>
+            </fieldset>
+        </form>
+    </div>
+ 
+ 
+    <!-- Javascript to initialize the code list -->
+    <script>
+    var input = document.querySelector("#phone");
+    window.intlTelInput(input, {
+     separateDialCode: true
+     });
+  </script>
+</body>
+</html>
